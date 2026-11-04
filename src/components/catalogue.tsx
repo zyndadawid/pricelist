@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { EnquiryModal } from "./enquiry-modal";
 import type { Artwork, Currency, Status } from "@/data/artworks";
 import { messages, locales, workCount, type Language } from "@/data/i18n";
@@ -58,10 +58,11 @@ function ArtworkCard({
           }
         : t;
   const [active, setActive] = useState(0);
+  const [photoRatios, setPhotoRatios] = useState<Record<string, number>>({});
   const track = useRef<HTMLDivElement>(null);
   const activePhoto = useRef(0);
   // Only real viewport-width changes may realign the current slide.
-  // Image loading and slide changes never resize the gallery or cancel its animation.
+  // Mobile height changes must not realign the slides or cancel a swipe.
   useEffect(() => {
     const el = track.current;
     if (!el) return;
@@ -90,6 +91,9 @@ function ArtworkCard({
       <div className="image-wrap">
         <div
           className="image-track"
+          style={{
+            "--mobile-photo-ratio": photoRatios[artwork.images[active]?.src] ?? 3 / 2,
+          } as CSSProperties}
           ref={track}
           onScroll={(e) => {
             const el = e.currentTarget;
@@ -126,6 +130,13 @@ function ArtworkCard({
                 height="1280"
                 loading={index === 0 ? "eager" : "lazy"}
                 draggable={false}
+                onLoad={(event) => {
+                  const photo = event.currentTarget;
+                  if (photo.naturalWidth && photo.naturalHeight) {
+                    const ratio = photo.naturalWidth / photo.naturalHeight;
+                    setPhotoRatios((old) => old[image.src] === ratio ? old : { ...old, [image.src]: ratio });
+                  }
+                }}
               />
             </div>
           ))}
