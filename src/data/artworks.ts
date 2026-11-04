@@ -12,62 +12,56 @@ export type Artwork = {
   description: Record<Language, string>;
   images: { src: string; alt: string }[];
 };
-// Illustrative catalogue only. Replace these records and public/artworks images with real works.
-// export const artworks: Artwork[] = [
-//   {
-//     id: "01",
-//     title: "Quiet arrangement",
-//     year: 2026,
-//     dimensions: "80 × 100 cm",
-//     medium: "Acrylic on canvas",
-//     prices: { PLN: 4800, EUR: 1150 },
-//     status: "available",
-//     description:
-//       "An exploration of balance, soft edges and the spaces between forms. Sample artwork and catalogue details for this design preview.",
-//     images: [],
-//   },
-//   {
-//     id: "02",
-//     title: "The shape of stillness",
-//     year: 2026,
-//     dimensions: "60 × 80 cm",
-//     medium: "Acrylic on canvas",
-//     prices: { PLN: 3600, EUR: 860 },
-//     status: "reserved",
-//     description:
-//       "Earth tones meet a single deep blue form. Sample artwork and catalogue details for this design preview.",
-//     images: [],
-//   },
-//   {
-//     id: "03",
-//     title: "Somewhere, slowly",
-//     year: 2025,
-//     dimensions: "100 × 120 cm",
-//     medium: "Mixed media on canvas",
-//     prices: { PLN: 6200, EUR: 1480 },
-//     status: "exhibition",
-//     description:
-//       "A study in rhythm and the quiet tension of overlapping planes. Sample artwork and catalogue details for this design preview.",
-//     images: [],
-//   },
-//   {
-//     id: "04",
-//     title: "After the light",
-//     year: 2025,
-//     dimensions: "70 × 90 cm",
-//     medium: "Acrylic on canvas",
-//     prices: { PLN: 4200, EUR: 1000 },
-//     status: "sold",
-//     description:
-//       "Warm colour held against a dark, architectural silhouette. Sample artwork and catalogue details for this design preview.",
-//     images: [],
-//   },
-// ]
 
 export const artworks: Artwork[] = [
   {
-    id: "even-horizon-oj-287",
-    title: "even horizon OJ 287",
+    id: "event-horizon-gw150914-36m-29m",
+    title: "event horizon GW150914 36m/29m",
+    year: 2025,
+    dimensions: "h:72x55x58cm",
+    medium: {
+      PL: "kamionka toczona na kole garncarskim, szlifowane szkło",
+      EN: "wheel-thrown stoneware, polished glass",
+      FR: "grès tourné au tour de potier, verre poli",
+    },
+    prices: { PLN: 21900, EUR: 5700 },
+
+    status: "available",
+    description: {
+      PL: "",
+      EN: "",
+      FR: "",
+    },
+    images: [
+      {
+        src: "/artworks/event-horizon-gw150914-36m-29m/event-horizon-gw150914-36m-29m-04-large.webp",
+        alt: "even horizon gw150914 36m/29m — photo 4",
+      },
+      {
+        src: "/artworks/event-horizon-gw150914-36m-29m/event-horizon-gw150914-36m-29m-05-large.webp",
+        alt: "even horizon gw150914 36m/29m — photo 5",
+      },
+      {
+        src: "/artworks/event-horizon-gw150914-36m-29m/event-horizon-gw150914-36m-29m-03-large.webp",
+        alt: "even horizon gw150914 36m/29m — photo 3",
+      },
+      {
+        src: "/artworks/event-horizon-gw150914-36m-29m/event-horizon-gw150914-36m-29m-04-large.webp",
+        alt: "even horizon gw150914 36m/29m — photo 4",
+      },
+      {
+        src: "/artworks/event-horizon-gw150914-36m-29m/event-horizon-gw150914-36m-29m-06-large.webp",
+        alt: "even horizon gw150914 36m/29m — photo 6",
+      },
+      {
+        src: "/artworks/event-horizon-gw150914-36m-29m/event-horizon-gw150914-36m-29m-07-large.webp",
+        alt: "even horizon gw150914 36m/29m — photo 7",
+      },
+    ],
+  },
+  {
+    id: "event-horizon-oj-287",
+    title: "event horizon OJ 287",
     year: 2025,
     dimensions: "h:45x58x45cm",
     medium: {
@@ -85,20 +79,24 @@ export const artworks: Artwork[] = [
     },
     images: [
       {
-        src: "/artworks/even-horizon-oj-287/even-horizon-oj-287-01-large.webp",
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-01-large.webp",
         alt: "even horizon OJ 287 — photo 1",
       },
       {
-        src: "/artworks/even-horizon-oj-287/even-horizon-oj-287-02-large.webp",
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-02-large.webp",
         alt: "even horizon OJ 287 — photo 2",
       },
       {
-        src: "/artworks/even-horizon-oj-287/even-horizon-oj-287-03-large.webp",
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-03-large.webp",
         alt: "even horizon OJ 287 — photo 3",
       },
       {
-        src: "/artworks/even-horizon-oj-287/even-horizon-oj-287-04-large.webp",
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-04-large.webp",
         alt: "even horizon OJ 287 — photo 4",
+      },
+      {
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-05-large.webp",
+        alt: "even horizon OJ 287 — photo 5",
       },
     ],
   },
@@ -192,6 +190,52 @@ export const artworks: Artwork[] = [
       },
     ],
   },
+  {
+    id: "event-horizon-cygnus-x-1",
+    title: "event horizon Cygnus X-1",
+    year: 2025,
+    dimensions: "h:42x42x30cm",
+    medium: {
+      PL: "kamionka toczona na kole garncarskim, szlifowane szkło",
+      EN: "wheel-thrown stoneware, polished glass",
+      FR: "grès tourné au tour de potier, verre poli",
+    },
+    prices: { PLN: 5000, EUR: 1150 },
+
+    status: "available",
+    description: {
+      PL: "",
+      EN: "",
+      FR: "",
+    },
+    images: [
+      {
+        src: "/artworks/event-horizon-cygnus-x-1/event-horizon-cygnus-x-1-09-large.webp",
+        alt: "event horizon Cygnus X-1 — photo 9",
+      },
+      {
+        src: "/artworks/event-horizon-cygnus-x-1/event-horizon-cygnus-x-1-01-large.webp",
+        alt: "event horizon Cygnus X-1 — photo 1",
+      },
+
+      {
+        src: "/artworks/event-horizon-cygnus-x-1/event-horizon-cygnus-x-1-05-large.webp",
+        alt: "event horizon Cygnus X-1 — photo 5",
+      },
+      {
+        src: "/artworks/event-horizon-cygnus-x-1/event-horizon-cygnus-x-1-06-large.webp",
+        alt: "event horizon Cygnus X-1 — photo 6",
+      },
+      {
+        src: "/artworks/event-horizon-cygnus-x-1/event-horizon-cygnus-x-1-07-large.webp",
+        alt: "event horizon Cygnus X-1 — photo 7",
+      },
+      {
+        src: "/artworks/event-horizon-cygnus-x-1/event-horizon-cygnus-x-1-08-large.webp",
+        alt: "event horizon Cygnus X-1 — photo 8",
+      },
+    ],
+  },
   // {
   //   id: "event-horizon-mini-1198",
   //   title: "event horizon MINI 1198",
@@ -255,7 +299,7 @@ export const artworks: Artwork[] = [
       EN: "wheel-thrown stoneware, polished glass",
       FR: "grès tourné au tour de potier, verre poli",
     },
-    prices: { PLN: 4500, EUR: 1050 },
+    prices: { PLN: 5000, EUR: 1150 },
 
     status: "available",
     description: {
@@ -374,7 +418,7 @@ export const artworks: Artwork[] = [
     },
     prices: { PLN: 5000, EUR: 1150 },
 
-    status: "sold",
+    status: "available",
     description: {
       PL: "Opis obrazu",
       EN: "Image description",
@@ -407,43 +451,43 @@ export const artworks: Artwork[] = [
       },
     ],
   },
-  {
-    id: "event-horizon-ngc4889",
-    title: "event horizon NGC4889",
-    year: 2026,
-    dimensions: "h:27x38x38cm",
-    medium: {
-      PL: "kamionka toczona na kole garncarskim, szlifowane szkło",
-      EN: "wheel-thrown stoneware, polished glass",
-      FR: "grès tourné au tour de potier, verre poli",
-    },
-    prices: { PLN: 4000, EUR: 950 },
+  // {
+  //   id: "event-horizon-ngc4889",
+  //   title: "event horizon NGC4889",
+  //   year: 2026,
+  //   dimensions: "h:27x38x38cm",
+  //   medium: {
+  //     PL: "kamionka toczona na kole garncarskim, szlifowane szkło",
+  //     EN: "wheel-thrown stoneware, polished glass",
+  //     FR: "grès tourné au tour de potier, verre poli",
+  //   },
+  //   prices: { PLN: 4000, EUR: 950 },
 
-    status: "sold",
-    description: { PL: "", EN: "", FR: "" },
-    images: [
-      {
-        src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-01-large.webp",
-        alt: "event horizon NGC4889 — photo 1",
-      },
-      {
-        src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-02-large.webp",
-        alt: "event horizon NGC4889 — photo 2",
-      },
-      {
-        src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-03-large.webp",
-        alt: "event horizon NGC4889 — photo 3",
-      },
-      {
-        src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-04-large.webp",
-        alt: "event horizon NGC4889 — photo 4",
-      },
-      {
-        src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-05-large.webp",
-        alt: "event horizon NGC4889 — photo 5",
-      },
-    ],
-  },
+  //   status: "sold",
+  //   description: { PL: "", EN: "", FR: "" },
+  //   images: [
+  //     {
+  //       src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-01-large.webp",
+  //       alt: "event horizon NGC4889 — photo 1",
+  //     },
+  //     {
+  //       src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-02-large.webp",
+  //       alt: "event horizon NGC4889 — photo 2",
+  //     },
+  //     {
+  //       src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-03-large.webp",
+  //       alt: "event horizon NGC4889 — photo 3",
+  //     },
+  //     {
+  //       src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-04-large.webp",
+  //       alt: "event horizon NGC4889 — photo 4",
+  //     },
+  //     {
+  //       src: "/artworks/event-horizon-ngc4889/event-horizon-ngc4889-05-large.webp",
+  //       alt: "event horizon NGC4889 — photo 5",
+  //     },
+  //   ],
+  // },
   {
     id: "event-horizon-ton618",
     title: "event horizon TON618",
@@ -456,7 +500,7 @@ export const artworks: Artwork[] = [
     },
     prices: { PLN: 7800, EUR: 1800 },
 
-    status: "sold",
+    status: "available",
     description: { PL: "", EN: "", FR: "" },
     images: [
       {
@@ -486,23 +530,3 @@ export const artworks: Artwork[] = [
     ],
   },
 ];
-
-// sdf
-// .map((work) => ({
-//   ...work,
-//   status: work.status as Status,
-//   images: [
-//     {
-//       src: `/artworks/${work.id}.svg`,
-//       alt: `${work.title} — illustrative composition`,
-//     },
-//     {
-//       src: `/artworks/${work.id}-detail.svg`,
-//       alt: `${work.title} — close-up detail`,
-//     },
-//     {
-//       src: `/artworks/${work.id}-room.svg`,
-//       alt: `${work.title} — illustrative wall view`,
-//     },
-//   ],
-// }));
