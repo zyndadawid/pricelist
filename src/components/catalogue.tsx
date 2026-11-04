@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { EnquiryModal } from "./enquiry-modal";
 import type { Artwork, Currency, Status } from "@/data/artworks";
 import { messages, locales, workCount, type Language } from "@/data/i18n";
 import {
@@ -85,7 +86,7 @@ function ArtworkCard({
     });
   }
   return (
-    <article className="art-card" aria-labelledby={`title-${artwork.id}`}>
+    <article id={`artwork-${artwork.id}`}  className="art-card" aria-labelledby={`title-${artwork.id}`}>
       <div className="image-wrap">
         <div
           className="image-track"
@@ -221,7 +222,7 @@ function ArtworkCard({
                 className={`contact-button ${artwork.status === "available" ? "primary" : ""}`}
                 onClick={() => onContact(artwork)}
               >
-                {artwork.status === "available" ? t.enquire : t.notify}{" "}
+                {t.enquire}{" "}
                 <span>↗</span>
               </button>
             ) : (
@@ -248,7 +249,6 @@ export function Catalogue({
   const [saved, setSaved] = useState<string[]>([]);
   const [ready, setReady] = useState(false);
   const [contact, setContact] = useState<Artwork | null>(null);
-  const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     try {
       const stored = localStorage.getItem("dz-language");
@@ -295,13 +295,6 @@ export function Catalogue({
         localStorage.setItem("dz-saved", JSON.stringify(saved));
       } catch {}
   }, [saved, ready]);
-  useEffect(() => {
-    if (contact) {
-      dialog.current?.showModal();
-    } else {
-      dialog.current?.close();
-    }
-  }, [contact]);
   const visible = artworks.filter(
     (a) =>
       filter === "all" ||
@@ -415,40 +408,9 @@ export function Catalogue({
           </footer>
         </main>
       </div>
-      <dialog
-        ref={dialog}
-        onCancel={() => setContact(null)}
-        onClick={(e) => {
-          if (e.target === e.currentTarget) setContact(null);
-        }}
-      >
-        <button
-          className="close-dialog"
-          aria-label={t.close}
-          onClick={() => setContact(null)}
-        >
-          ×
-        </button>
-        <span className="small-label">{t.preview}</span>
-        <h2>{contact?.status === "available" ? t.own : t.keep}</h2>
-        <p>{contact ? localizeArtwork(contact, language).title : null}</p>
-        <p className="dialog-note">
-          {contact?.status === "available" ? t.enquiryNote : t.notifyNote}{" "}
-          {t.notSent}
-        </p>
-        <button
-          className="contact-button primary"
-          onClick={() => {
-            if (contact)
-              setSaved((old) =>
-                old.includes(contact.id) ? old : [...old, contact.id],
-              );
-            setContact(null);
-          }}
-        >
-          {t.saveNow} <Bookmark />
-        </button>
-      </dialog>
+      {contact && (
+        <EnquiryModal key={contact.id} artwork={contact} language={language} onClose={() => setContact(null)} />
+      )}
     </>
   );
 }

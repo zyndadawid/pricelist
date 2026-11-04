@@ -6,3 +6,5 @@ out/
 
 .venv-photos/
 __pycache__/
+
+!.env.example
