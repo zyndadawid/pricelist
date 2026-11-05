@@ -58,7 +58,7 @@ function ArtworkCard({
           }
         : t;
   const [active, setActive] = useState(0);
-  const [detailsOpen, setDetailsOpen] = useState(false);
+  const [detailsOpen, setDetailsOpen] = useState(true);
   const [photoRatios, setPhotoRatios] = useState<Record<string, number>>({});
   const track = useRef<HTMLDivElement>(null);
   const activePhoto = useRef(0);
@@ -190,7 +190,7 @@ function ArtworkCard({
           <h2 id={`title-${artwork.id}`}>{artwork.title}</h2>
           <span>{artwork.year}</span>
         </div>
-        <details className="artwork-details" onToggle={(event) => setDetailsOpen(event.currentTarget.open)}>
+        <details className="artwork-details" open={detailsOpen} onToggle={(event) => setDetailsOpen(event.currentTarget.open)}>
           <summary>
             <span className="material-text">
               {[artwork.dimensions, artwork.medium].filter(Boolean).join(" · ")}
