@@ -17,7 +17,7 @@ export const artworks: Artwork[] = [
   {
     id: "event-horizon-gw150914-36m-29m",
     title: "event horizon GW150914 36m/29m",
-    year: 2025,
+    year: 2026,
     dimensions: "h:72x55x58cm",
     medium: {
       PL: "kamionka toczona na kole garncarskim, szlifowane szkło",
@@ -26,7 +26,7 @@ export const artworks: Artwork[] = [
     },
     prices: { PLN: 21900, EUR: 5700 },
 
-    status: "available",
+    status: "exhibition",
     description: {
       PL: "",
       EN: "",
