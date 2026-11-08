@@ -15,6 +15,47 @@ export type Artwork = {
 
 export const artworks: Artwork[] = [
   {
+    id: "event-horizon-oj-287",
+    title: "event horizon OJ 287",
+    year: 2025,
+    dimensions: "h:45x58x45cm",
+    medium: {
+      PL: "kamionka toczona na kole garncarskim, szlifowane szkło",
+      EN: "wheel-thrown stoneware, polished glass",
+      FR: "grès tourné au tour de potier, verre poli",
+    },
+    prices: { PLN: 8000, EUR: 1850 },
+
+    status: "available",
+    description: {
+      PL: "prezentowana na XVII Międzynarodowym Biennale Ceramiki w Manises, Hiszpania 2026",
+      EN: "Exhibited at the 17th International Ceramics Biennial in Manises, Spain, 2026",
+      FR: "Présentée à la XVIIe Biennale internationale de céramique de Manises, Espagne, 2026",
+    },
+    images: [
+      {
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-01-large.webp",
+        alt: "even horizon OJ 287 — photo 1",
+      },
+      {
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-02-large.webp",
+        alt: "even horizon OJ 287 — photo 2",
+      },
+      {
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-03-large.webp",
+        alt: "even horizon OJ 287 — photo 3",
+      },
+      {
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-04-large.webp",
+        alt: "even horizon OJ 287 — photo 4",
+      },
+      {
+        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-05-large.webp",
+        alt: "even horizon OJ 287 — photo 5",
+      },
+    ],
+  },
+  {
     id: "event-horizon-gw150914-36m-29m",
     title: "event horizon GW150914 36m/29m",
     year: 2026,
@@ -60,47 +101,6 @@ export const artworks: Artwork[] = [
     ],
   },
   {
-    id: "event-horizon-oj-287",
-    title: "event horizon OJ 287",
-    year: 2025,
-    dimensions: "h:45x58x45cm",
-    medium: {
-      PL: "kamionka toczona na kole garncarskim, szlifowane szkło",
-      EN: "wheel-thrown stoneware, polished glass",
-      FR: "grès tourné au tour de potier, verre poli",
-    },
-    prices: { PLN: 8000, EUR: 1850 },
-
-    status: "available",
-    description: {
-      PL: "prezentowana na XVII Międzynarodowym Biennale Ceramiki w Manises, Hiszpania 2026",
-      EN: "Exhibited at the 17th International Ceramics Biennial in Manises, Spain, 2026",
-      FR: "Présentée à la XVIIe Biennale internationale de céramique de Manises, Espagne, 2026",
-    },
-    images: [
-      {
-        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-01-large.webp",
-        alt: "even horizon OJ 287 — photo 1",
-      },
-      {
-        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-02-large.webp",
-        alt: "even horizon OJ 287 — photo 2",
-      },
-      {
-        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-03-large.webp",
-        alt: "even horizon OJ 287 — photo 3",
-      },
-      {
-        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-04-large.webp",
-        alt: "even horizon OJ 287 — photo 4",
-      },
-      {
-        src: "/artworks/event-horizon-oj-287/event-horizon-oj-287-05-large.webp",
-        alt: "even horizon OJ 287 — photo 5",
-      },
-    ],
-  },
-  {
     id: "event-horizon-grs-1915-105",
     title: "event horizon GRS 1915+105",
     year: 2026,
@@ -138,6 +138,45 @@ export const artworks: Artwork[] = [
       {
         src: "/artworks/event-horizon-grs-1915-105/event-horizon-grs-1915-105-05-large.webp",
         alt: "event horizon GRS 1915+105 — photo 5",
+      },
+    ],
+  },
+  {
+    id: "event-horizon-oj-49",
+    title: "event horizon OJ 49",
+    year: 2025,
+    dimensions: "h:28x32x30cm",
+    medium: {
+      PL: "kamionka toczona na kole garncarskim, szlifowane szkło",
+      EN: "wheel-thrown stoneware, polished glass",
+      FR: "grès tourné au tour de potier, verre poli",
+    },
+    prices: { PLN: 4000, EUR: 950 },
+
+    status: "available",
+
+    description: {
+      PL: "Prezentowana na Międzynarodowym Konkursie Ceramiki w Carouge (Genewa), Szwajcaria, 2026",
+      EN: "Exhibited at the International Ceramics Competition in Carouge (Geneva), Switzerland, 2026",
+      FR: "Présentée au Concours international de céramique à Carouge (Genève), Suisse, 2026",
+    },
+
+    images: [
+      {
+        src: "/artworks/event-horizon-oj-49/event-horizon-oj-49-01-large.webp",
+        alt: "even horizon OJ 49 — photo 1",
+      },
+      {
+        src: "/artworks/event-horizon-oj-49/event-horizon-oj-49-02-large.webp",
+        alt: "even horizon OJ 49 — photo 2",
+      },
+      {
+        src: "/artworks/event-horizon-oj-49/event-horizon-oj-49-03-large.webp",
+        alt: "even horizon OJ 49 — photo 3",
+      },
+      {
+        src: "/artworks/event-horizon-oj-49/event-horizon-oj-49-04-large.webp",
+        alt: "even horizon OJ 49 — photo 4",
       },
     ],
   },
